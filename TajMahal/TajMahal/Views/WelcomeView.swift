@@ -78,25 +78,4 @@ struct WelcomeView: View {
     WelcomeView()
 }
 
-struct RestoInfoRow: View {
-    let logo: String
-    let text: String
-    var text2: String?
-    
-    var body: some View {
-        HStack {
-            Image(systemName: logo)
 
-            Text(text)
-            
-            Spacer()
-            
-            if let text2 {
-                Text(text2)
-            }
-        }
-        .padding(.vertical, 10)
-        .font(.custom("Avenir-Heavy", size: 14))
-        .fontWeight(.light)
-    }
-}

@@ -14,6 +14,9 @@
 		42E9DCB52AF11138007CE7D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E9DCB42AF11138007CE7D0 /* Preview Assets.xcassets */; };
 		42E9DCBF2AF11439007CE7D0 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9DCBE2AF11439007CE7D0 /* WelcomeView.swift */; };
 		42E9DCC22AF117AE007CE7D0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9DCC12AF117AE007CE7D0 /* MenuView.swift */; };
+		ACDFEBCA2CAC4E6500E61238 /* DishRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFEBC92CAC4E6500E61238 /* DishRow.swift */; };
+		ACDFEBCC2CAC5A7200E61238 /* SpiceLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFEBCB2CAC5A7200E61238 /* SpiceLevelView.swift */; };
+		ACDFEBCE2CAC62D000E61238 /* RestoInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFEBCD2CAC62D000E61238 /* RestoInfoRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		42E9DCBE2AF11439007CE7D0 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		42E9DCC02AF11662007CE7D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		42E9DCC12AF117AE007CE7D0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		ACDFEBC92CAC4E6500E61238 /* DishRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishRow.swift; sourceTree = "<group>"; };
+		ACDFEBCB2CAC5A7200E61238 /* SpiceLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiceLevelView.swift; sourceTree = "<group>"; };
+		ACDFEBCD2CAC62D000E61238 /* RestoInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoInfoRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +87,10 @@
 			isa = PBXGroup;
 			children = (
 				42E9DCBE2AF11439007CE7D0 /* WelcomeView.swift */,
+				ACDFEBCD2CAC62D000E61238 /* RestoInfoRow.swift */,
 				42E9DCC12AF117AE007CE7D0 /* MenuView.swift */,
+				ACDFEBC92CAC4E6500E61238 /* DishRow.swift */,
+				ACDFEBCB2CAC5A7200E61238 /* SpiceLevelView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +169,9 @@
 				42E9DCBF2AF11439007CE7D0 /* WelcomeView.swift in Sources */,
 				42E9DCC22AF117AE007CE7D0 /* MenuView.swift in Sources */,
 				42E9DCAE2AF11136007CE7D0 /* TajMahalApp.swift in Sources */,
+				ACDFEBCC2CAC5A7200E61238 /* SpiceLevelView.swift in Sources */,
+				ACDFEBCA2CAC4E6500E61238 /* DishRow.swift in Sources */,
+				ACDFEBCE2CAC62D000E61238 /* RestoInfoRow.swift in Sources */,
 				428D2B512AFA851900BBA4F5 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
