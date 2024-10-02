@@ -38,6 +38,8 @@ struct MenuView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: CustomBackButton(image: "chevron.left", backText: "Menu"))
     }
 }
 

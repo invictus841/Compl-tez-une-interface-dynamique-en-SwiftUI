@@ -10,6 +10,7 @@ import SwiftUI
 struct DishDetailView: View {
     let dish: Dish
     
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -63,8 +64,11 @@ struct DishDetailView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: CustomBackButton(image: "chevron.left", backText: dish.name))
     }
 }
+
 
 
 #Preview {

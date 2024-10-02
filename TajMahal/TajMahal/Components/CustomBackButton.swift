@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct customBackButton: View {
+struct CustomBackButton: View {
     @Environment(\.presentationMode) var presentationMode
     
     let image: String
@@ -21,6 +21,7 @@ struct customBackButton: View {
                     .aspectRatio(contentMode: .fit)
                     .bold()
                     .foregroundStyle(.black)
+                
                 Text(backText ?? "")
                     .bold()
                     .fontWeight(.semibold)
