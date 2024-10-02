@@ -39,7 +39,7 @@ struct WelcomeView: View {
                 .padding(.horizontal, 32)
                 
                 VStack(spacing: 0) {
-                    RestoInfoRow(logo: "clock", text: "\(getDayOfWeek())", text2: "11h30 - 14h30・18h30 - 22h00")
+                    RestoInfoRow(logo: "clock", text: "Mardi", text2: "11h30 - 14h30・18h30 - 22h00")
                     RestoInfoRow(logo: "fork.knife", text: "Type de service", text2: "A emporter")
                     RestoInfoRow(logo: "map", text: "12 Avenue de la Brique - 75010 Paris")
                     RestoInfoRow(logo: "phone", text: "06 12 34 56 78")
@@ -64,13 +64,6 @@ struct WelcomeView: View {
             }
             .padding(.vertical)
         }
-    }
-    
-    func getDayOfWeek() -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE"
-        dateFormatter.locale = Locale(identifier: "fr_FR")
-        return dateFormatter.string(from: Date()).capitalized
     }
 }
 
