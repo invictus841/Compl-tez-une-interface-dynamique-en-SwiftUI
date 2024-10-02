@@ -17,15 +17,23 @@ struct MenuView: View {
             ScrollView {
                 Section(header: Text("Entrées").font(.title2).fontWeight(.bold)) {
                     ForEach(viewModel.apetizerArray, id: \.name) { appetizer in
-                        DishRow(dish: appetizer)
-                            .padding(.horizontal)
+                        NavigationLink {
+                            DishDetailView(dish: appetizer)
+                        } label: {
+                            DishRow(dish: appetizer)
+                                .padding(.horizontal)
+                        }
                     }
                 }
                 
                 Section(header: Text("Plats Principaux").font(.title2).fontWeight(.bold)) {
                     ForEach(viewModel.mainCourseArray, id: \.name) { mainCourse in
-                        DishRow(dish: mainCourse)
-                            .padding(.horizontal)
+                        NavigationLink {
+                            DishDetailView(dish: mainCourse)
+                        } label: {
+                            DishRow(dish: mainCourse)
+                                .padding(.horizontal)
+                        }
                     }
                 }
             }
