@@ -12,7 +12,7 @@ struct SpiceLevelView: View {
     let size: CGFloat
     
     var body: some View {
-        HStack(spacing: 4) {
+        HStack(spacing: 8) {
             Image("spice")
                 .resizable()
                 .scaledToFit()
@@ -33,6 +33,13 @@ struct SpiceLevelView: View {
                 .foregroundStyle(spiceLevel == .hot ? .customRed : .gray)
                 .frame(height: size)
                 .padding(.top, 6)
+        }
+        .padding(.top, 2)
+        .padding(.bottom, 6)
+        .padding(.horizontal, 10)
+        .background {
+            Capsule()
+                .fill(Color.white)
         }
     }
 }
