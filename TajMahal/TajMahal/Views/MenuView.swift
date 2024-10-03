@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// Menu sous forme de liste
 struct MenuView: View {
     // Référence vers le view model qui permet d'accéder aux tableaux d'entrées et de plats du menu
     let viewModel: ViewModel = ViewModel()
@@ -15,7 +14,7 @@ struct MenuView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                Section(header: Text("Entrées").font(.title2).fontWeight(.bold)) {
+                Section(header: CustomSectionHeader(title: "Entrées")) {
                     ForEach(viewModel.apetizerArray, id: \.name) { appetizer in
                         NavigationLink {
                             DishDetailView(dish: appetizer)
@@ -26,7 +25,7 @@ struct MenuView: View {
                     }
                 }
                 
-                Section(header: Text("Plats Principaux").font(.title2).fontWeight(.bold)) {
+                Section(header: CustomSectionHeader(title: "Plats Principaux")) {
                     ForEach(viewModel.mainCourseArray, id: \.name) { mainCourse in
                         NavigationLink {
                             DishDetailView(dish: mainCourse)
@@ -45,9 +44,10 @@ struct MenuView: View {
 
 
 #Preview {
-//    WelcomeView()
     MenuView()
 }
+
+
 
 
 
