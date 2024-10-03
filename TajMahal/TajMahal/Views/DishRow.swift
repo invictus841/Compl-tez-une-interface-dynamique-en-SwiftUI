@@ -24,15 +24,16 @@ struct DishRow: View {
                 Text(dish.name.capitalized)
                     .lineLimit(2)
                     .font(.headline)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.black.opacity(0.6))
                     .padding(.top, 6)
                 
-                Spacer()
-                
                 Text(dish.description)
-                    .font(.footnote)
+                    .font(.system(size: 14))
                     .foregroundColor(.gray)
                     .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 3)
                 
                 Spacer()
                 
@@ -40,22 +41,20 @@ struct DishRow: View {
                     Text(dish.price)
                         .foregroundStyle(.gray)
                         .fontWeight(.semibold)
+                        .font(.subheadline)
                     
                     Spacer()
                     
-                    SpiceLevelView(spiceLevel: dish.spiceLevel, size: 16)
-                        .padding(.bottom, 6)
+                    SpiceLevelView(spiceLevel: dish.spiceLevel, size: 12)
+                        .padding(.bottom, 3)
                 }
-                .padding(.top, 10)
-                
-                
             }
             .padding(.leading, 8)
             
             Spacer()
         }
         .frame(maxWidth: .infinity)
-        .frame(maxHeight: 112)
+        .frame(height: 112)
         .padding(16)
         .background(Color.white)
         .cornerRadius(10)
@@ -64,6 +63,6 @@ struct DishRow: View {
 }
 
 #Preview {
-    DishRow(dish: .init(name: "pakoras", description: "Test", allergens: "test", ingredients: "test", spiceLevel: SpiceLevel.medium, imageName: "Pakoras", price: "5.50€"))
+    DishRow(dish: .init(name: "pakoras", description: "Test.padding(.horizonsdsdsssdsdsdsdsdsdsshorizonsdsdsssdsdsdsdsdsdss", allergens: "test", ingredients: "test", spiceLevel: SpiceLevel.medium, imageName: "Pakoras", price: "5.50€"))
         .preferredColorScheme(.dark)
 }
