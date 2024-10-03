@@ -13,25 +13,30 @@ struct MenuView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                Section(header: CustomSectionHeader(title: "Entrées")) {
-                    ForEach(viewModel.apetizerArray, id: \.name) { appetizer in
-                        NavigationLink {
-                            DishDetailView(dish: appetizer)
-                        } label: {
-                            DishRow(dish: appetizer)
-                                .padding(.horizontal)
+            ZStack {
+                Color.gray.opacity(0.1)
+                    .ignoresSafeArea()
+                
+                ScrollView {
+                    Section(header: CustomSectionHeader(title: "Entrées")) {
+                        ForEach(viewModel.apetizerArray, id: \.name) { appetizer in
+                            NavigationLink {
+                                DishDetailView(dish: appetizer)
+                            } label: {
+                                DishRow(dish: appetizer)
+                                    .padding(.horizontal)
+                            }
                         }
                     }
-                }
-                
-                Section(header: CustomSectionHeader(title: "Plats Principaux")) {
-                    ForEach(viewModel.mainCourseArray, id: \.name) { mainCourse in
-                        NavigationLink {
-                            DishDetailView(dish: mainCourse)
-                        } label: {
-                            DishRow(dish: mainCourse)
-                                .padding(.horizontal)
+                    
+                    Section(header: CustomSectionHeader(title: "Plats Principaux")) {
+                        ForEach(viewModel.mainCourseArray, id: \.name) { mainCourse in
+                            NavigationLink {
+                                DishDetailView(dish: mainCourse)
+                            } label: {
+                                DishRow(dish: mainCourse)
+                                    .padding(.horizontal)
+                            }
                         }
                     }
                 }

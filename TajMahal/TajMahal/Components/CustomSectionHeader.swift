@@ -16,12 +16,15 @@ struct CustomSectionHeader: View {
             Text(title)
                 .font(.headline)
                 .fontWeight(.semibold)
-                .foregroundColor(.secondary)
+                .foregroundColor(.primary.opacity(0.8))
             Spacer()
         }
         .padding(.horizontal)
         .padding(.top, 10)
         .padding(.bottom, 5)
-        .background(Color(UIColor.systemBackground))
     }
+}
+
+#Preview {
+    MenuView()
 }
