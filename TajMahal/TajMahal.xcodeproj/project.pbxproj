@@ -19,6 +19,7 @@
 		ACDFEBCE2CAC62D000E61238 /* RestoInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFEBCD2CAC62D000E61238 /* RestoInfoRow.swift */; };
 		ACDFEBD02CADC1C400E61238 /* DishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFEBCF2CADC1C400E61238 /* DishDetailView.swift */; };
 		ACDFEBD32CADD95300E61238 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFEBD22CADD95300E61238 /* CustomBackButton.swift */; };
+		ACDFEBD62CAEDEF800E61238 /* CustomSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFEBD52CAEDEF800E61238 /* CustomSectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		ACDFEBCD2CAC62D000E61238 /* RestoInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoInfoRow.swift; sourceTree = "<group>"; };
 		ACDFEBCF2CADC1C400E61238 /* DishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailView.swift; sourceTree = "<group>"; };
 		ACDFEBD22CADD95300E61238 /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
+		ACDFEBD52CAEDEF800E61238 /* CustomSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				42E9DCBE2AF11439007CE7D0 /* WelcomeView.swift */,
-				ACDFEBCD2CAC62D000E61238 /* RestoInfoRow.swift */,
 				42E9DCC12AF117AE007CE7D0 /* MenuView.swift */,
 				ACDFEBCF2CADC1C400E61238 /* DishDetailView.swift */,
-				ACDFEBC92CAC4E6500E61238 /* DishRow.swift */,
-				ACDFEBCB2CAC5A7200E61238 /* SpiceLevelView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,6 +103,10 @@
 		ACDFEBD42CADD96D00E61238 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ACDFEBC92CAC4E6500E61238 /* DishRow.swift */,
+				ACDFEBCD2CAC62D000E61238 /* RestoInfoRow.swift */,
+				ACDFEBCB2CAC5A7200E61238 /* SpiceLevelView.swift */,
+				ACDFEBD52CAEDEF800E61238 /* CustomSectionHeader.swift */,
 				ACDFEBD22CADD95300E61238 /* CustomBackButton.swift */,
 			);
 			path = Components;
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				428D2B532AFA882700BBA4F5 /* ViewModel.swift in Sources */,
+				ACDFEBD62CAEDEF800E61238 /* CustomSectionHeader.swift in Sources */,
 				42E9DCBF2AF11439007CE7D0 /* WelcomeView.swift in Sources */,
 				42E9DCC22AF117AE007CE7D0 /* MenuView.swift in Sources */,
 				ACDFEBD02CADC1C400E61238 /* DishDetailView.swift in Sources */,
