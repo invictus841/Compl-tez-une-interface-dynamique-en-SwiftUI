@@ -20,6 +20,7 @@
 		ACDFEBD02CADC1C400E61238 /* DishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFEBCF2CADC1C400E61238 /* DishDetailView.swift */; };
 		ACDFEBD32CADD95300E61238 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFEBD22CADD95300E61238 /* CustomBackButton.swift */; };
 		ACDFEBD62CAEDEF800E61238 /* CustomSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFEBD52CAEDEF800E61238 /* CustomSectionHeader.swift */; };
+		ACDFEBD82CAEEFCC00E61238 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFEBD72CAEEFCC00E61238 /* MenuSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		ACDFEBCF2CADC1C400E61238 /* DishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailView.swift; sourceTree = "<group>"; };
 		ACDFEBD22CADD95300E61238 /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		ACDFEBD52CAEDEF800E61238 /* CustomSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSectionHeader.swift; sourceTree = "<group>"; };
+		ACDFEBD72CAEEFCC00E61238 /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				ACDFEBCB2CAC5A7200E61238 /* SpiceLevelView.swift */,
 				ACDFEBD52CAEDEF800E61238 /* CustomSectionHeader.swift */,
 				ACDFEBD22CADD95300E61238 /* CustomBackButton.swift */,
+				ACDFEBD72CAEEFCC00E61238 /* MenuSection.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				ACDFEBCA2CAC4E6500E61238 /* DishRow.swift in Sources */,
 				ACDFEBCE2CAC62D000E61238 /* RestoInfoRow.swift in Sources */,
 				428D2B512AFA851900BBA4F5 /* Model.swift in Sources */,
+				ACDFEBD82CAEEFCC00E61238 /* MenuSection.swift in Sources */,
 				ACDFEBD32CADD95300E61238 /* CustomBackButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

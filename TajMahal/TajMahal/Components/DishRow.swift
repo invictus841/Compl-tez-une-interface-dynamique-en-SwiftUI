@@ -11,7 +11,7 @@ struct DishRow: View {
     let dish: Dish
     
     var body: some View {
-        HStack(spacing: 16) {
+        HStack {
             VStack {
                 Image(dish.imageName)
                     .resizable()
@@ -20,9 +20,10 @@ struct DishRow: View {
                     .cornerRadius(8)
             }
             
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading) {
                 Text(dish.name.capitalized)
                     .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
                     .font(.headline)
                     .foregroundStyle(.black.opacity(0.6))
                     .padding(.top, 6)
@@ -30,9 +31,8 @@ struct DishRow: View {
                 Text(dish.description)
                     .font(.system(size: 14))
                     .foregroundColor(.gray)
-                    .lineLimit(2)
+                    .lineLimit(4)
                     .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, 3)
                 
                 Spacer()
@@ -49,20 +49,22 @@ struct DishRow: View {
                         .padding(.bottom, 3)
                 }
             }
-            .padding(.leading, 8)
+            .padding(.leading, 16)
+            .padding(.bottom, 10)
+            .padding(.top, 10)
             
             Spacer()
         }
         .frame(maxWidth: .infinity)
         .frame(height: 112)
-        .padding(16)
+        .padding(.vertical, 10)
+        .padding(.leading, 12)
         .background(Color.white)
         .cornerRadius(10)
-        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
     }
 }
 
 #Preview {
-    DishRow(dish: .init(name: "pakoras", description: "Test.padding(.horizonsdsdsssdsdsdsdsdsdsshorizonsdsdsssdsdsdsdsdsdss", allergens: "test", ingredients: "test", spiceLevel: SpiceLevel.medium, imageName: "Pakoras", price: "5.50€"))
+    DishRow(dish: .init(name: "Pakoras a la viandess", description: "Test.padding(.horizonsdsdsssdsdsdsdsdsdsshorizonsdsdsssdsdsdsdsdsdss", allergens: "test", ingredients: "test", spiceLevel: SpiceLevel.medium, imageName: "Pakoras", price: "5.50€"))
         .preferredColorScheme(.dark)
 }
