@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MenuView: View {
-    // Référence vers le view model qui permet d'accéder aux tableaux d'entrées et de plats du menu
     let viewModel: ViewModel = ViewModel()
     
     var body: some View {
@@ -18,35 +17,18 @@ struct MenuView: View {
                     .ignoresSafeArea()
                 
                 ScrollView {
-                    Section(header: CustomSectionHeader(title: "Entrées")) {
-                        ForEach(viewModel.apetizerArray, id: \.name) { appetizer in
-                            NavigationLink {
-                                DishDetailView(dish: appetizer)
-                            } label: {
-                                DishRow(dish: appetizer)
-                                    .padding(.horizontal)
-                            }
-                        }
+                    VStack(spacing: 20) {
+                        MenuSection(title: "Entrées", dishes: viewModel.apetizerArray)
+                        MenuSection(title: "Plats Principaux", dishes: viewModel.mainCourseArray)
                     }
-                    
-                    Section(header: CustomSectionHeader(title: "Plats Principaux")) {
-                        ForEach(viewModel.mainCourseArray, id: \.name) { mainCourse in
-                            NavigationLink {
-                                DishDetailView(dish: mainCourse)
-                            } label: {
-                                DishRow(dish: mainCourse)
-                                    .padding(.horizontal)
-                            }
-                        }
-                    }
+                    .padding(.horizontal)
                 }
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: CustomBackButton(image: "chevron.left", backText: "Menu"))
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: CustomBackButton(image: "chevron.left", backText: "Menu"))
     }
 }
-
 
 #Preview {
     MenuView()
