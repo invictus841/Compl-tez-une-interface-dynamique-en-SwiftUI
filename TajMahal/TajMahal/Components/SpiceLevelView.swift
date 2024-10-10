@@ -13,21 +13,21 @@ struct SpiceLevelView: View {
     
     var body: some View {
         HStack(spacing: 8) {
-            Image("spice")
+            Image("piment")
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(.customRed)
                 .frame(height: size)
                 .padding(.top, 6)
             
-            Image("spice")
+            Image("piment")
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(spiceLevel == .medium || spiceLevel == .hot ? .customRed : .gray)
                 .frame(height: size)
                 .padding(.top, 6)
             
-            Image("spice")
+            Image("piment")
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(spiceLevel == .hot ? .customRed : .gray)
