@@ -10,7 +10,7 @@ import SwiftUI
 struct RestoInfoRow: View {
     let logo: String
     let text: String
-    var text2: String?
+    var optionalText: String?
     
     var body: some View {
         HStack {
@@ -20,8 +20,8 @@ struct RestoInfoRow: View {
             
             Spacer()
             
-            if let text2 {
-                Text(text2)
+            if let optionalText {
+                Text(optionalText)
             }
         }
         .padding(.vertical, 10)
@@ -31,5 +31,5 @@ struct RestoInfoRow: View {
 }
 
 #Preview {
-    RestoInfoRow(logo: "fork.knife", text: "Venez manger chez nous", text2: "Ouvert")
+    RestoInfoRow(logo: "fork.knife", text: "Venez manger chez nous", optionalText: "Ouvert")
 }

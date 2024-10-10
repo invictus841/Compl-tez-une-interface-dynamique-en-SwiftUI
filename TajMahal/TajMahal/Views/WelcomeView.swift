@@ -39,8 +39,8 @@ struct WelcomeView: View {
                 .padding(.horizontal, 32)
                 
                 VStack(spacing: 0) {
-                    RestoInfoRow(logo: "clock", text: "Mardi", text2: "11h30 - 14h30・18h30 - 22h00")
-                    RestoInfoRow(logo: "fork.knife", text: "Type de service", text2: "A emporter")
+                    RestoInfoRow(logo: "clock", text: "Mardi", optionalText: "11h30 - 14h30・18h30 - 22h00")
+                    RestoInfoRow(logo: "fork.knife", text: "Type de service", optionalText: "A emporter")
                     RestoInfoRow(logo: "map", text: "12 Avenue de la Brique - 75010 Paris")
                     RestoInfoRow(logo: "globe", text: "www.tajmahal.fr")
                     RestoInfoRow(logo: "phone", text: "06 12 34 56 78")
