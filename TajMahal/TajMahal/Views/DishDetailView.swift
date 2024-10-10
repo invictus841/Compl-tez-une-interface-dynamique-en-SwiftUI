@@ -13,56 +13,54 @@ struct DishDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        NavigationStack {
-            ScrollView {
+        ScrollView {
+            VStack {
                 VStack {
-                    VStack {
-                        Image(dish.imageName)
-                            .resizable()
-                            .scaledToFit()
-                            .overlay(alignment: .topTrailing) {
-                                SpiceLevelView(spiceLevel: dish.spiceLevel, size: 16)
-                                    .padding()
-                            }
-                            .cornerRadius(12)
-                            .padding()
-                    }
-                    
-                    HStack {
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text("Allergènes:")
-                                .font(.system(size: 13))
-                                .foregroundStyle(.primary.opacity(0.8))
-                            
-                            Text(dish.allergens)
-                                .font(.system(size: 12))
-                                .foregroundStyle(.secondary)
+                    Image(dish.imageName)
+                        .resizable()
+                        .scaledToFit()
+                        .overlay(alignment: .topTrailing) {
+                            SpiceLevelView(spiceLevel: dish.spiceLevel, size: 16)
+                                .padding()
                         }
+                        .cornerRadius(12)
                         .padding()
+                }
+                
+                HStack {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Allergènes:")
+                            .font(.system(size: 13))
+                            .foregroundStyle(.primary.opacity(0.8))
                         
-                        Spacer()
+                        Text(dish.allergens)
+                            .font(.system(size: 12))
+                            .foregroundStyle(.secondary)
                     }
-                    
-                    Divider()
-                        .padding(.horizontal)
-                    
-                    HStack {
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text("Ingrédients:")
-                                .font(.system(size: 13))
-                                .foregroundStyle(.primary.opacity(0.8))
-                            
-                            Text(dish.ingredients)
-                                .font(.system(size: 12))
-                                .foregroundStyle(.secondary)
-                        }
-                        .padding()
-                        
-                        Spacer()
-                    }
+                    .padding()
                     
                     Spacer()
                 }
+                
+                Divider()
+                    .padding(.horizontal)
+                
+                HStack {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Ingrédients:")
+                            .font(.system(size: 13))
+                            .foregroundStyle(.primary.opacity(0.8))
+                        
+                        Text(dish.ingredients)
+                            .font(.system(size: 12))
+                            .foregroundStyle(.secondary)
+                    }
+                    .padding()
+                    
+                    Spacer()
+                }
+                
+                Spacer()
             }
         }
         .navigationBarBackButtonHidden()
