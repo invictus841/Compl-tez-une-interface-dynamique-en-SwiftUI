@@ -24,8 +24,22 @@ struct MenuView: View {
                     .padding(.horizontal)
                 }
             }
-            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: CustomBackButton(image: "chevron.left", backText: "Menu"))
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Image(systemName: "chevron.left")
+                        .aspectRatio(contentMode: .fit)
+                        .bold()
+                        .foregroundStyle(.black)
+                }
+                ToolbarItem(placement: .principal) {
+                    Text("Menu")
+                        .bold()
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.black)
+                        .font(.title2)
+                }
+            }
         }
     }
 }
