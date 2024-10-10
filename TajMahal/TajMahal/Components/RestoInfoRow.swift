@@ -25,8 +25,8 @@ struct RestoInfoRow: View {
             }
         }
         .padding(.vertical, 10)
-        .font(.custom("Avenir-Heavy", size: 14))
-        .fontWeight(.light)
+        .font(.custom("PlusJakartaSans-SemiBold", size: 12))
+        .foregroundStyle(.customGray)
     }
 }
 

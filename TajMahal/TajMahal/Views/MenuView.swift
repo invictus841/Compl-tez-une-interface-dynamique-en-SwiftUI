@@ -34,17 +34,13 @@ struct MenuView: View {
                         presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Image(systemName: "chevron.left")
-                            .aspectRatio(contentMode: .fit)
-                            .bold()
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.customBlack)
                     })
                 }
                 ToolbarItem(placement: .principal) {
                     Text("Menu")
-                        .bold()
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.black)
-                        .font(.title2)
+                        .font(.custom("PlusJakartaSans-Bold", size: 18))
+                        .foregroundStyle(.customBlack)
                 }
             }
         }

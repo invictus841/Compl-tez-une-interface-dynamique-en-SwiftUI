@@ -22,15 +22,15 @@ struct DishRow: View {
             
             VStack(alignment: .leading) {
                 Text(dish.name.capitalized)
+                    .font(.custom("PlusJakartaSans-SemiBold", size: 14))
+                    .foregroundStyle(.customGray)
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
-                    .font(.headline)
-                    .foregroundStyle(.black.opacity(0.6))
                     .padding(.top, 6)
                 
                 Text(dish.description)
-                    .font(.system(size: 14))
-                    .foregroundColor(.gray)
+                    .font(.custom("PlusJakartaSans-Regular", size: 12))
+                    .foregroundStyle(.customGray)
                     .lineLimit(4)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, 3)
@@ -39,9 +39,8 @@ struct DishRow: View {
                 
                 HStack {
                     Text(dish.price)
-                        .foregroundStyle(.gray)
-                        .fontWeight(.semibold)
-                        .font(.subheadline)
+                        .font(.custom("PlusJakartaSans-SemiBold", size: 12))
+                        .foregroundStyle(.customGray)
                     
                     Spacer()
                     

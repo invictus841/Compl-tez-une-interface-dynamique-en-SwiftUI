@@ -19,11 +19,11 @@ struct WelcomeView: View {
                     HStack {
                         VStack(alignment: .leading) {
                             Text("Restaurant Indien")
-                                .font(.subheadline)
-                                .fontWeight(.light)
+                                .font(.custom("PlusJakartaSans-Regular", size: 12))
+                                .foregroundStyle(.customGray)
                             Text("Taj Mahal")
-                                .bold()
-                                .font(.title3)
+                                .font(.custom("PlusJakartaSans-Bold", size: 18))
+                                .foregroundStyle(.customBlack)
                         }
                         
                         Spacer()
@@ -32,7 +32,7 @@ struct WelcomeView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(height: 40)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(.customLogo)
                     }
                 }
                 .padding(.vertical)
@@ -54,12 +54,12 @@ struct WelcomeView: View {
                 } label : {
                     HStack {
                         Text("Accéder au menu")
-                            .fontWeight(.heavy)
+                            .font(.custom("PlusJakartaSans-Bold", size: 16))
+                            .foregroundStyle(.white)
                     }
                     .frame(width: 320, height: 20)
                     .padding()
                     .background(Color.customRed)
-                    .foregroundStyle(.white)
                     .cornerRadius(12)
                 }
             }

@@ -30,12 +30,12 @@ struct DishDetailView: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Allergènes:")
-                            .font(.system(size: 13))
-                            .foregroundStyle(.primary.opacity(0.8))
+                            .font(.custom("PlusJakartaSans-SemiBold", size: 12))
+                            .foregroundStyle(.customGray)
                         
                         Text(dish.allergens)
-                            .font(.system(size: 12))
-                            .foregroundStyle(.secondary)
+                            .font(.custom("PlusJakartaSans-Regular", size: 12))
+                            .foregroundStyle(.customGray)
                     }
                     .padding()
                     
@@ -48,12 +48,12 @@ struct DishDetailView: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Ingrédients:")
-                            .font(.system(size: 13))
-                            .foregroundStyle(.primary.opacity(0.8))
+                            .font(.custom("PlusJakartaSans-SemiBold", size: 12))
+                            .foregroundStyle(.customGray)
                         
                         Text(dish.ingredients)
-                            .font(.system(size: 12))
-                            .foregroundStyle(.secondary)
+                            .font(.custom("PlusJakartaSans-Regular", size: 12))
+                            .foregroundStyle(.customGray)
                     }
                     .padding()
                     
@@ -72,14 +72,10 @@ struct DishDetailView: View {
                 }, label: {
                     HStack {
                         Image(systemName: "chevron.left")
-                            .aspectRatio(contentMode: .fit)
-                            .bold()
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.customBlack)
                         Text(dish.name)
-                            .bold()
-                            .fontWeight(.semibold)
-                            .foregroundStyle(.black)
-                            .font(.title2)
+                            .font(.custom("PlusJakartaSans-Bold", size: 18))
+                            .foregroundStyle(.customBlack)
                     }
                 })
             }

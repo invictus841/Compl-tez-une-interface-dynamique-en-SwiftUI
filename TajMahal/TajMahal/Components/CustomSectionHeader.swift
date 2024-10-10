@@ -14,12 +14,11 @@ struct CustomSectionHeader: View {
     var body: some View {
         HStack {
             Text(title)
-                .font(.headline)
-                .fontWeight(.semibold)
-                .foregroundColor(.primary.opacity(0.8))
+                .font(.custom("PlusJakartaSans-Bold", size: 14))
+                .foregroundStyle(.customGray)
             Spacer()
         }
-        .padding(.horizontal)
+        .padding(.horizontal, 5)
         .padding(.top, 10)
         .padding(.bottom, 5)
     }
