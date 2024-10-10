@@ -10,6 +10,7 @@ import SwiftUI
 struct DishDetailView: View {
     let dish: Dish
     
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationStack {
@@ -64,8 +65,27 @@ struct DishDetailView: View {
                 }
             }
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: CustomBackButton(image: "chevron.left", backText: dish.name))
+        .navigationBarBackButtonHidden()
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    HStack {
+                        Image(systemName: "chevron.left")
+                            .aspectRatio(contentMode: .fit)
+                            .bold()
+                            .foregroundStyle(.black)
+                        Text(dish.name)
+                            .bold()
+                            .fontWeight(.semibold)
+                            .foregroundStyle(.black)
+                            .font(.title2)
+                    }
+                })
+            }
+        }
     }
 }
 

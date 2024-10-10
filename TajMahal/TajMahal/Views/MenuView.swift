@@ -10,6 +10,8 @@ import SwiftUI
 struct MenuView: View {
     let viewModel: ViewModel = ViewModel()
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -24,13 +26,18 @@ struct MenuView: View {
                     .padding(.horizontal)
                 }
             }
+            .navigationBarBackButtonHidden()
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Image(systemName: "chevron.left")
-                        .aspectRatio(contentMode: .fit)
-                        .bold()
-                        .foregroundStyle(.black)
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }, label: {
+                        Image(systemName: "chevron.left")
+                            .aspectRatio(contentMode: .fit)
+                            .bold()
+                            .foregroundStyle(.black)
+                    })
                 }
                 ToolbarItem(placement: .principal) {
                     Text("Menu")
