@@ -20,7 +20,7 @@ struct DishDetailView: View {
                             .resizable()
                             .scaledToFit()
                             .overlay(alignment: .topTrailing) {
-                                SpiceLevelView(spiceLevel: dish.spiceLevel, size: 12)
+                                SpiceLevelView(spiceLevel: dish.spiceLevel, size: 16)
                                     .padding()
                             }
                             .cornerRadius(12)

@@ -18,25 +18,21 @@ struct SpiceLevelView: View {
                 .scaledToFit()
                 .foregroundStyle(.customRed)
                 .frame(height: size)
-                .padding(.top, 6)
             
             Image("piment")
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(spiceLevel == .medium || spiceLevel == .hot ? .customRed : .gray)
                 .frame(height: size)
-                .padding(.top, 6)
             
             Image("piment")
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(spiceLevel == .hot ? .customRed : .gray)
                 .frame(height: size)
-                .padding(.top, 6)
         }
-        .padding(.top, 2)
-        .padding(.bottom, 6)
         .padding(.horizontal, 10)
+        .padding(.vertical, 4)
         .background {
             Capsule()
                 .fill(Color.white)
@@ -45,5 +41,6 @@ struct SpiceLevelView: View {
 }
 
 #Preview {
-    SpiceLevelView(spiceLevel: .medium, size: 16)
+//    SpiceLevelView(spiceLevel: .medium, size: 16)
+    DishDetailView(dish: ViewModel().mainCourseArray[0])
 }
